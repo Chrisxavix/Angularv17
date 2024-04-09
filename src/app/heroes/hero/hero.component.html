@@ -1,0 +1,39 @@
+<h1>{{ title }}</h1>
+<h2>{{name}}</h2>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Método:</td>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{ capitalizeName }}</dd>
+</dl>
+
+<div style="margin-top: 30px; background-color: aquamarine; margin-bottom: 30px;" >
+  <div *ngFor="let item of arrayName">
+    {{item}}
+  </div>
+</div>
+
+<button *ngIf="!changename"
+  class="btn btn-primary"
+  (click)="setName('Spiderman')">
+  Cambiar nombre
+</button>
+
+<button *ngIf="age !== 20"
+  class="btn btn-primary mx-2"
+  (click)="setAge(20)">
+  Cambiar edad
+</button>
+
+<button
+  class="btn btn-primary"
+  (click)="reset()">
+  reset
+</button>
