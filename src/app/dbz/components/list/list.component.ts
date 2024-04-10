@@ -10,5 +10,7 @@ export class ListComponent {
 
   @Input()
   public characterList: Character[] = [];
+  @Input()
+  public title: string = "Sin Título";
 
 }

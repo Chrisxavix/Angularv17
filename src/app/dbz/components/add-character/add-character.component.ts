@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../../Interfaces/character-interface';
 
 @Component({
   selector: 'dbz-add-character',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AddCharacterComponent {
 
+  public character: Character = {
+    name: "Skill",
+    power: 10
+  };
 }

@@ -15,7 +15,13 @@ export class MainPageComponent {
     {
       name: "Goku",
       power: 9.500
+    },
+    {
+      name: "Vegeta",
+      power: 300
     }
-];
+  ];
+
+  public titleCharacters: string = "Personajes BDZ";
 
 }
