@@ -24,4 +24,15 @@ export class MainPageComponent {
 
   public titleCharacters: string = "Personajes BDZ";
 
+  onNewCharacter(character: Character): void {
+    console.log("MainPage");
+    console.log(character);
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter(indexCharacter: number): void {
+    console.log("Principal");
+    this.characters.splice(indexCharacter, 1)
+  }
+
 }
