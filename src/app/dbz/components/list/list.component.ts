@@ -15,10 +15,11 @@ export class ListComponent {
   public title: string = "Sin Título";
 
   @Output()
-  onDeleteCharacter: EventEmitter<number> = new EventEmitter();
+  onDeleteCharacter: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacterIndex(indexCharacter: number): void {
+  onDeleteCharacterIndex(indexCharacter?: string): void {
     console.log(indexCharacter);
+    if(!indexCharacter) return;
     this.onDeleteCharacter.emit(indexCharacter);
   }
 
